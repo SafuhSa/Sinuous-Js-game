@@ -87,4 +87,4 @@ Install the controls for the user to interact with the game. Style the frontend,
 
 ### Bonus features
 - [x] Make it usable by multiple users
-- [x] Adding multiple diffculty leveels
+- [x] Adding multiple diffculty levels
