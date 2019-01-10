@@ -30,6 +30,7 @@ Playback controls along the top will include Start, Pause and Restart buttons.
 
 On the left near the bottom, will be an expandable menu allowing users to select the 'levels'.
 
+![](https://cdn.mos.cms.futurecdn.net/48a163f8291af724f141cce1e9d60034-650-80.jpg)
 
 ### Architecture and Technologies
 
@@ -47,6 +48,8 @@ In addition to the webpack entry file, there will be four scripts involved in th
 `sinuous.js`: this script will house the physics logic for the Sinuous.
 
 `evolutions.js`: this lightweight script will house the constructor and update functions for the `Evolutions` objects.  
+
+![](https://tutorialzine.com/media/2015/01/sinuous.jpg)
 
 ### Implementation Timeline
 **Day 1**: 
