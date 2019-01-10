@@ -57,28 +57,34 @@ In addition to the webpack entry file, there will be four scripts involved in th
 - [x] Finished momentum collision physics on my version of the Asteroids project
 - [x] Completed WebAudioAPI Tutorial and loaded basic sound from static assets
 
-**Day 2**: Setup all necessary Node modules, including getting webpack up and running.  Create `webpack.config.js` as well as `package.json`.  Write a basic entry file and the bare bones of all 4 scripts outlined above.  L  Goals for the day:
+**Day 2**: 
+Setup all necessary Node modules, including getting webpack up and running.  Create `webpack.config.js` as well as `package.json`.  Write a basic entry file and the bare bones of all 4 scripts outlined above.  L  Goals for the day:
 
 - [x] Get `webpack` serving files and frame out index.html
-- [x] Learn enough `Web Audio` to render an object to the `Canvas` element and create a sound
+- [x] Learn how to create a sound on collision.
 - [x] Port over the relevant pieces of my Asteroids(with collision physics) project and implement Asteroid creation
 
-**Day 3**: Dedicate this day to learning the `Web Audio` API.  First, build out the `AudioEvent` object to connect to the `Board` object.  Then, use `board.js` to create and render `Asteroid`s and `AudioEvent`s. Goals for the day:
+**Day 3**: 
+Build out the `AudioEvent` object to connect to the `Board` object.  Then, use `board.js` to create and render `Asteroid`s and `AudioEvent`s. Goals for the day:
 
 - [x] Complete the `asteroids.js` module (constructor, update functions, colors)
 - [x] Get sounds to play on collisions
 - [x] Get collision graphics working
 - [x] Make the `Asteroid`s able to be movable with mouse.
 
-**Day 4**: Create the logic. Build out functions for handling the different evolutions. Goals for the day:
+**Day 4**:
+Create the logic. Build out functions for handling the different evolutions. Goals for the day:
 - [x] work on `AudioEvent` object with correct type and handling logic
-- [x] Have a functional screen on the `Canvas` frontend that correctly handles creation and running of the simulation.
+- [x] Have a functional screen on the `Canvas` frontend.
 - [x] Make sure that starting and stopping works.
 
-**Day 5**: Install the controls for the user to interact with the game. Style the frontend, making it polished and professional. Goals for the day:
+**Day 5**: 
+Install the controls for the user to interact with the game. Style the frontend, making it polished and professional. Goals for the day:
 
 - [x] Create controls for game speed, stop, start, restart.
 - [x] Have a styled `Canvas`, nice looking controls and title
 - [x] Deploy the project on GitHub Pages
 
 ### Bonus features
+- [x] Make it usable by multiple users
+- [x] Adding multiple diffculty leveels
