@@ -67,21 +67,17 @@ In addition to the webpack entry file, there will be four scripts involved in th
 
 - [x] Complete the `asteroids.js` module (constructor, update functions, colors)
 - [x] Get sounds to play on collisions
-- [x] Build first sound library
 - [x] Get collision graphics working
-- [x] Make the `Asteroid`s able to be movable with mouse. Set vectors on mouse release.
+- [x] Make the `Asteroid`s able to be movable with mouse.
 
 **Day 4**: Create the logic. Build out functions for handling the different evolutions. Goals for the day:
-
-- [x] Build Markov Matrix object and link it with collisions
-- [x] Export an `AudioEvent` object with correct type and handling logic
+- [x] work on `AudioEvent` object with correct type and handling logic
 - [x] Have a functional screen on the `Canvas` frontend that correctly handles creation and running of the simulation.
 - [x] Make sure that starting and stopping works.
 
 **Day 5**: Install the controls for the user to interact with the game. Style the frontend, making it polished and professional. Goals for the day:
 
 - [x] Create controls for game speed, stop, start, restart.
-- [x] Build out list of instruments
 - [x] Have a styled `Canvas`, nice looking controls and title
 - [x] Deploy the project on GitHub Pages
 
