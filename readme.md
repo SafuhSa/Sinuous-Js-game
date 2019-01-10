@@ -26,8 +26,6 @@ Instructions
 
 This app will consist of a single screen with the simulation canvas, playback controls, probabilities controls and nav links to the Github, my LinkedIn.  
 
-The simulation canvas will include a dropdown for selecting the initial color of the creation object. Users will click and drag to create objects of a certain size and vector angle.
-
 Playback controls along the top will include Start, Pause and Restart buttons.
 
 On the left near the bottom, will be an expandable menu allowing users to select the 'levels'.
@@ -46,34 +44,33 @@ In addition to the webpack entry file, there will be four scripts involved in th
 
 `board.js`: this script will handle the logic for creating and updating the necessary DOM elements.
 
-`asteroids.js`: this script will house the physics logic for the asteroids.
-
-`audio.js`: this script will handle the audio logic and the creation of `AudioEvent`s based on the input parameters outlined above. The programming paradigm will be an audio graph consisting of buffers and processing nodes, all connected into a master bus, and referencing a global AudioContext with its own timeline.
+`sinuous.js`: this script will house the physics logic for the Sinuous.
 
 `evolutions.js`: this lightweight script will house the constructor and update functions for the `Evolutions` objects.  
 
 ### Implementation Timeline
 **Day 1**: 
-- [x] Finished momentum collision physics on my version of the Asteroids project
-- [x] Completed WebAudioAPI Tutorial and loaded basic sound from static assets
-
-**Day 2**: 
 Setup all necessary Node modules, including getting webpack up and running.  Create `webpack.config.js` as well as `package.json`.  Write a basic entry file and the bare bones of all 4 scripts outlined above.  L  Goals for the day:
 
 - [x] Get `webpack` serving files and frame out index.html
 - [x] Learn how to create a sound on collision.
-- [x] Port over the relevant pieces of my Asteroids(with collision physics) project and implement Asteroid creation
+
+**Day 2**: 
+- [x] Finished momentum collision physics.
+- [x] Completed WebAudioAPI Tutorial and loaded basic sound from static assets
+
 
 **Day 3**: 
-Build out the `AudioEvent` object to connect to the `Board` object.  Then, use `board.js` to create and render `Asteroid`s and `AudioEvent`s. Goals for the day:
+Build out the `AudioEvent` object to connect to the `Board` object.  Then, use `board.js` to create and render `Sinuous`s and `AudioEvent`s. Goals for the day:
 
-- [x] Complete the `asteroids.js` module (constructor, update functions, colors)
+- [x] Complete the `Sinuous.js` module (constructor, update functions, colors)
 - [x] Get sounds to play on collisions
 - [x] Get collision graphics working
-- [x] Make the `Asteroid`s able to be movable with mouse.
+- [x] Make the `Sinuous`s able to be movable with mouse.
 
 **Day 4**:
 Create the logic. Build out functions for handling the different evolutions. Goals for the day:
+- [x] Animate a line in after effects (mouse movement)
 - [x] work on `AudioEvent` object with correct type and handling logic
 - [x] Have a functional screen on the `Canvas` frontend.
 - [x] Make sure that starting and stopping works.
