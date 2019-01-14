@@ -7,11 +7,11 @@ document.addEventListener("DOMContentLoaded", function() {
   canvasEl.width = 1000
   canvasEl.height = 600;
 
-  let sound = new Howl ({
-    src: ['/src/Two.mp3'],
-    buffer: true,
-    loop: true
-  })
+  // let sound = new Howl ({
+  //   src: ['/src/Two.mp3'],
+  //   buffer: true,
+  //   loop: true
+  // })
 
 
   ctx.fillStyle = 'black';
@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
   document.querySelector('button').addEventListener('click', () => {
     const game = new Game({ctx: ctx, canvas: canvasEl, level: 1});
     game.start()
-    // sound.play()
+    sound.play()
   })
 
   // sound.stop()
