@@ -1,0 +1,24 @@
+<html>
+
+  <head>
+    <title>Canvas Intro</title>
+  </head>
+
+  <body>
+    <canvas height="500" width="500" id="ctx" style="border:1px solid #000000" />
+    <script>
+      var ctx = document.getElementById('ctx').getContext('2d');
+      ctx.font = '30px Calibri';
+       ctx.fillStyle = "#00FF00"
+       
+       ctx.beginPath();
+      // ctx.fillText("first line", 90, 200);
+      // ctx.arc(30, 30, 5, 0, 2 * Math.PI, true);
+       ctx.moveTo(0, 0);
+      ctx.lineTo(300, 300);
+      ctx.stroke()
+      // ctx.fill();
+    </script>
+  </body>
+
+</html>
