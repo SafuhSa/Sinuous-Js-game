@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
   document.querySelector('button').addEventListener('click', () => {
     const game = new Game({ctx: ctx, canvas: canvasEl, level: 1});
     game.start()
-    sound.play()
+    // sound.play()
   })
 
   // sound.stop()

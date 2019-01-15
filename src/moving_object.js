@@ -34,11 +34,7 @@ class MovingObject {
     if (Date.now() - this.date <= 1000) {
       return null;
     }
-    // sqrt((x2-x1)^2 + (y2-y1)^2) = r1+r2
-    // let xcols = ((red_bl.ball_x + red_bl.radius) >= this.crl.ball_x) && ((red_bl.ball_x - red_bl.radius) <= this.crl.ball_x);
-    // let ycols = ((red_bl.ball_y + red_bl.radius) >= this.crl.ball_y) && ((red_bl.ball_y - red_bl.radius) <= this.crl.ball_y);
 
-    
     let dif_x = Math.pow((red_bl.ball_x - this.crl.ball_x), 2);
     let dif_y = Math.pow((red_bl.ball_y - this.crl.ball_y), 2);
     let dis = Math.sqrt(dif_x + dif_y);
@@ -129,42 +125,3 @@ class MovingObject {
 }
 
 module.exports = MovingObject;
-
-// class Game {
-//   constructor(options) {
-//     this.score;
-//     this.life = 5;
-//     this.level = options.level;
-//     this.ctx = options.ctx
-//     this.canvas = options.canvas
-    
-//     this.moving_objs = new MovingObject({
-//       ctx: this.ctx,
-//       canvas: this.canvas,
-//       game: this,
-//       nums: 5
-//     });
-//     this.start = this.start.bind(this)
-//     this.update = this.update.bind(this)
-//   }
-  
-//   start() {
-    
-//     window.requestAnimationFrame(this.update.bind(this));
-//   }
-  
-  
-//   update() {
-//     this.fillrec();
-//     this.moving_objs.update()
-
-//     window.requestAnimationFrame(this.update);
-//   }
-  
-//   fillrec(h, w) {
-//     this.ctx.fillStyle = "black";
-//     // this.ctx.fillRect(0, 0, w, h);
-//     this.ctx.fillRect(0, 0, this.canvas.width, this.canvas.height);
-//   }
-// }
-// module.exports = Game;

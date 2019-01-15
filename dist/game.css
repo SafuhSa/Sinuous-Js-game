@@ -1,0 +1,62 @@
+html, body, div, span, h1, h2, h3, h4, a, ol, ul, li, form, label, article, aside, figure, figcaption, footer, header, nav {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+body {
+  line-height: 1.5;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+img {
+  width: 100%
+}
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    background-color: rgba( 0, 0, 0, 0.5 );
+    color: #222222;
+    font-size: 12px;
+    /* overflow: hidden; */
+    height: 100%;
+}
+
+.main-body {
+  display: flex;
+  flex-direction: row;
+}
+
+#first-canvas {
+  width: 300px;
+      background-color: #111111;
+    border: 6px #333333 solid;
+}
+
+.menu {
+    margin: auto;
+    border: 2px solid black;
+    display: flex;
+    color: gray;
+    flex-direction: column;
+    background-color:rgba(20,20,20, .5);
+    display: none;
+}
+.menu-header {
+  color: aliceblue;
+}
+
+#game-canvas {
+    cursor: crosshair;
+    background-color: #111111;
+    border: 6px #333333 solid;
+    border-radius: 4px;
+    margin: auto;
+    margin-top: 40px
+    /* display: none; */
+}
