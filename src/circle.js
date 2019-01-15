@@ -8,10 +8,35 @@ class Circle {
     this.ball_y = options.ball_y;
     this.radius = options.radius;
     this.color = options.color;
+    this.red = options.red
+
     this.draw = this.draw.bind(this)
     this.move = this.move.bind(this)
+
+    this.fkRadius = this.radius
+
+    if(this.red){
+      setInterval(this.flashChge.bind(this), 1000);
+    }
   }
 
+
+  flashChge() {
+
+    if (this.radius === this.fkRadius) {
+      this.radius = this.fkRadius * 1.5;
+      this.ctx.shadowBlur = 8;
+      this.ctx.shadowColor = "gold";
+      this.ctx.shadowOffsetX = 3;
+      this.ctx.shadowOffsetY = -3;
+    } else {
+      this.ctx.shadowBlur = 8;
+      this.ctx.shadowColor = "gold";
+      this.ctx.shadowOffsetX = 3;
+      this.ctx.shadowOffsetY = -3;
+      this.radius = this.fkRadius;
+    }
+  }
 
   draw() {
     this.ctx.fillStyle = this.color;

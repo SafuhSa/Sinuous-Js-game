@@ -45,11 +45,25 @@ class Line {
     // this.ctx.beginPath();
     // this.ctx.arc(fromx, fromy, 2, 0, 2 * Math.PI, true);
     // this.ctx.fill();
+    const sdb =  this.ctx.shadowBlur;
+    const sdc =  this.ctx.shadowColor;
+    const sdx = this.ctx.shadowOffsetX;
+    const sdy = this.ctx.shadowOffsetY;
+
+    this.ctx.shadowBlur = 8;
+    this.ctx.shadowColor = "blue";
+    this.ctx.shadowOffsetX = 5;
+    this.ctx.shadowOffsetY = 5;
 
     this.ctx.beginPath();
     this.ctx.moveTo(fromx, fromy);
     this.ctx.lineTo(toX, toY);
     this.ctx.stroke();
+    
+    this.ctx.shadowBlur = sdb;
+    this.ctx.shadowColor = sdc;
+    this.ctx.shadowOffsetX = sdx;
+    this.ctx.shadowOffsetY = sdy;
   }
 }
 

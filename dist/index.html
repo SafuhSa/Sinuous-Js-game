@@ -8,11 +8,15 @@
 </head>
 
 <body>
+  <div class="header">
+    <strong>Sinuous</strong> is a javascript game lovely and easy to play. Use your mouse to guide your serpentine cursor safely through the field
+    of red dots, snagging power ups to get various boosts and increase that all-powerful high-score.
+  </div>
   <div class="menu">
     <ul class="menu-header">
-      <li>Score</li>
-      <li>Level</li>
-      <li>Time</li>
+      <div id='score'>Score</div>
+      <div id='lifes'>Lifes</div>
+      <div id='time'>Time</div>
     </ul>
     <div class="instructions">
       <h1 class="instructions-header">Instructions</h1>
@@ -24,9 +28,11 @@
       </ul>
     </div>
     
-    <button class="button" >Start</button>
-    <button class="button" >Stop</button>
+    <button id='start' class="button" >Start</button>
+    <div class="level" >Level</div>
+    <button class="button" >Mute</button>
   </div>
+  <button id='pause' class="button" > || </button>
     <div class="main-body">
       <canvas id='first-canvas'></canvas>
       </canvas>

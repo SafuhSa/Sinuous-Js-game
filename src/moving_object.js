@@ -6,7 +6,7 @@ class MovingObject {
     this.date = Date.now()
     this.canvas = options.canvas;
     this.ctx = options.ctx;
-    this.crl = new Circle ({ ctx: this.ctx, canvas: this.canvas, ball_x: 500, ball_y: 100, radius: 5, color: "#00FFFF" });
+    this.crl = new Circle ({ ctx: this.ctx, canvas: this.canvas, ball_x: 500, ball_y: 100, radius: 5, color: "#00FFFF", red: false });
     this.line = new Line({ cursor: this.crl, ctx: this.ctx})
     this.game = options.game;
 
@@ -62,9 +62,9 @@ class MovingObject {
   
   
   update() {
+    this.move(this.arr)
     this.crl.draw()
     this.line.draw(this.crl.ball_x, this.crl.ball_y)
-    this.move(this.arr)
   }
   
   move(arr) {
@@ -91,7 +91,8 @@ class MovingObject {
         ball_x: x,
         ball_y: 0,
         radius: 5,
-        color: "#DC143C" //red
+        color: "#DC143C", //red,
+        red: true
       };
       circle = new Circle(obj);
       arr.push(circle);
@@ -105,7 +106,8 @@ class MovingObject {
         ball_x: this.canvas.width,
         ball_y: y,
         radius: 5,
-        color: "#DC143C" // red
+        color: "#DC143C", // red
+        red: true
       };
       circle = new Circle(obj);
       arr.push(circle);

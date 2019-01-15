@@ -27,21 +27,57 @@ body {
     height: 100%;
 }
 
+.header {
+  border: 2px solid black;
+  font-size: larger;
+  padding: 10px;
+  text-align: center;
+  height: 60px;
+
+}
+
 .main-body {
   display: flex;
   flex-direction: row;
+  margin-top: 40px;
 }
 
 #first-canvas {
-    width: 300px;
+    width: 350px;
     background-color: #222222;
     /* background-color: red; */
     border: 6px #333333 solid;
     margin: auto;
-    height: 500px;
-    top: 70;
-    left: 90;
+    height: 600px;
+    /* top: 70;
+    left: 90; */
 }
+
+#game-canvas {
+    /* position: absolute; */
+    cursor: crosshair;
+    background-color: #111111;
+    border: 6px #333333 solid;
+    border-radius: 4px;
+    margin: auto;
+    /* display: none; */
+}
+
+.menu {
+  position: absolute;
+  top: 200px;
+  left: 95px;
+  margin: auto;
+  border: 2px solid#333333;
+  display: flex;
+  color: gray;
+  flex-direction: column;
+  background-color:rgba(0,0,0,0.5);
+  padding: 10;
+  width: 300px;
+  border-radius: 13px;
+}
+
 
 .menu-header {
   display: flex;
@@ -49,17 +85,13 @@ body {
   font-size: initial;
 }
 
-.menu {
-    position: absolute;
-    top: 200px;
-    left: 115px;
-    margin: auto;
-    border: 2px solid black;
-    display: flex;
-    color: gray;
-    flex-direction: column;
-    background-color:rgba(0,0,0,0.5);
-    /* display: none; */
+.instructions {
+  font-size: large;
+  color: #888787;
+}
+
+.instructions h1 {
+  color: white;
 }
 .instructions-header {
   color: aliceblue;
@@ -71,15 +103,15 @@ body {
   border: none;
   font-size: xx-large;
   text-align: left;
+  margin-top: 10px;
+}
+.level {
+  border: 2px solid green
 }
 
-#game-canvas {
-    /* position: absolute; */
-    cursor: crosshair;
-    background-color: #111111;
-    border: 6px #333333 solid;
-    border-radius: 4px;
-    margin: auto;
-    margin-top: 40px
-    /* display: none; */
+#pause {
+    position: absolute;
+    top: 125px;
+    left: 610px;
 }
+
