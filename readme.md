@@ -52,6 +52,7 @@ In addition to the webpack entry file, there will be four scripts involved in th
 ![](https://tutorialzine.com/media/2015/01/sinuous.jpg)
 
 ### Implementation Timeline
+
 **Day 1**: 
 Setup all necessary Node modules, including getting webpack up and running.  Create `webpack.config.js` as well as `package.json`.  Write a basic entry file and the bare bones of all 4 scripts outlined above.  L  Goals for the day:
 
