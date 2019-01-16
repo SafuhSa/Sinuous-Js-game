@@ -6,18 +6,20 @@ class MovingObject {
     this.date = Date.now()
     this.canvas = options.canvas;
     this.ctx = options.ctx;
-    this.crl = new Circle ({ ctx: this.ctx, canvas: this.canvas, ball_x: 500, ball_y: 100, radius: 5, color: "#00FFFF", red: false });
-    this.line = new Line({ cursor: this.crl, ctx: this.ctx})
     this.game = options.game;
-
+    this.demo = options.demo;
+    
     this.arr = this.populate(options.nums)
     this.org = this.arr.length
     
+    if (!this.demo) {
+      this.crl = new Circle ({ ctx: this.ctx, canvas: this.canvas, ball_x: 500, ball_y: 100, radius: 5, color: "#00FFFF", red: false });
+      this.line = new Line({ cursor: this.crl, ctx: this.ctx})
+      this.canvas.addEventListener('mousemove', this.updateMousePos.bind(this));
+    }
     
     this.refreshId = setInterval(this.incr.bind(this), 1000 / 2);
-    this.canvas.addEventListener('mousemove', this.updateMousePos.bind(this));
-    
-    // this.update = this.update.bind(this)
+    this.update = this.update.bind(this)
   }
 
   updateMousePos(event) {
@@ -44,7 +46,7 @@ class MovingObject {
     if (dis <= both_rds) {
       this.game.life -= 1;
       this.date = Date.now();
-      console.log('collision');
+      document.getElementById('lifes').innerHTML = 'lifes: ' + this.game.life
       }
   }
   
@@ -63,15 +65,20 @@ class MovingObject {
   
   update() {
     this.move(this.arr)
-    this.crl.draw()
-    this.line.draw(this.crl.ball_x, this.crl.ball_y)
+    if (!this.demo) {
+      // debugger
+      this.crl.draw()
+      this.line.draw(this.crl.ball_x, this.crl.ball_y)
+    }
   }
   
   move(arr) {
     for (let i = 0; i < arr.length; i++) {
       const circl = arr[i];
       circl.move();
-      this.collision(circl)
+      if (!this.demo) {
+        this.collision(circl)
+      }
     }
   }
   
@@ -82,6 +89,13 @@ class MovingObject {
     let arr = [];
     let obj;
     let circle;
+    let radius;
+    if (this.demo === 'left_canvas') {
+      radius = 2.5;
+    } else {
+      radius = 5;
+    }
+
     
     for (let i = 0; i < xs.length; i++) {
       const x = xs[i];
@@ -90,7 +104,7 @@ class MovingObject {
         canvas: this.canvas,
         ball_x: x,
         ball_y: 0,
-        radius: 5,
+        radius: radius,
         color: "#DC143C", //red,
         red: true
       };
@@ -105,7 +119,7 @@ class MovingObject {
         canvas: this.canvas,
         ball_x: this.canvas.width,
         ball_y: y,
-        radius: 5,
+        radius: radius,
         color: "#DC143C", // red
         red: true
       };

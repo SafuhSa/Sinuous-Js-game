@@ -4,7 +4,7 @@ import { Howl } from 'howler';
 document.addEventListener("DOMContentLoaded", function() {
   const ftcanvas = document.getElementById("first-canvas");
   const ftctx = ftcanvas.getContext("2d");
-  const fake = new Game({ ctx: ftctx, canvas: ftcanvas, level: 2 })
+  const fake = new Game({ ctx: ftctx, canvas: ftcanvas, level: 2, demo: 'left_canvas', run: 'start' })
   fake.start()
 
   const canvasEl = document.getElementById("game-canvas");
@@ -21,15 +21,28 @@ document.addEventListener("DOMContentLoaded", function() {
 
   ctx.fillStyle = 'black';
   ctx.fillRect(0, 0, canvasEl.width, canvasEl.height);
+  const demo = new Game({ctx: ctx, canvas: canvasEl, level: 1, demo: 'right_canvas', run: 'start'});
+  demo.start()
 
-  const game = new Game({ctx: ctx, canvas: canvasEl, level: 1});
-  document.getElementById('start').addEventListener('click', () => {
+  let game;
+  let doc = document.getElementById('start')
+    doc.addEventListener('click', () => {
+      // doc.location.reload()
+    if (doc.innerHTML === 'Start') {
+      doc.innerHTML = 'Restart';
+    } else {
+      doc.innerHTML = 'Start';
+    }
+    game = new Game({ctx: ctx, canvas: canvasEl, level: 1, demo: false});
     game.run = 'start';
     game.start()
     // sound.play()
   })
 
   document.getElementById("pause").addEventListener("click", () => {
+    if(!game) {
+      game = new Game({ ctx: ctx, canvas: canvasEl, level: 1, demo: false });
+    }
     if (game.run === 'pause') {
       game.run = 'start'
     } else {
