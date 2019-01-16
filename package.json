@@ -12,17 +12,18 @@
     "webpack-cli": "^3.2.1"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SafuhSa/Bubble-Shooter.git"
+    "url": "git+https://github.com/SafuhSa/Sinuous-Js-game.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/SafuhSa/Bubble-Shooter/issues"
+    "url": "https://github.com/SafuhSa/Sinuous-Js-game/issues"
   },
-  "homepage": "https://github.com/SafuhSa/Bubble-Shooter#readme"
+  "homepage": "https://github.com/SafuhSa/Sinuous-Js-game#readme"
 }
