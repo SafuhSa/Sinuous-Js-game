@@ -1,0 +1,28 @@
+{
+  "name": "Sinuous-Game",
+  "version": "1.0.0",
+  "description": "## Background and Overview  Sinuous is a game that show the power of Javascript. Users navigate through a field of red spots that are moving towards you in ever-increasing quantities and speed. The game uses HTML5 canvas for the graphics.",
+  "main": "index.js",
+  "dependencies": {
+    "howler": "^2.1.1",
+    "lodash": "^4.17.11"
+  },
+  "devDependencies": {
+    "webpack": "^4.28.4",
+    "webpack-cli": "^3.2.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SafuhSa/Bubble-Shooter.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SafuhSa/Bubble-Shooter/issues"
+  },
+  "homepage": "https://github.com/SafuhSa/Bubble-Shooter#readme"
+}

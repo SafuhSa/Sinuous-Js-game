@@ -1,6 +1,6 @@
 const Game = require("./game");
 import { Howl } from 'howler';
-
+import _ from 'lodash';
 document.addEventListener("DOMContentLoaded", function() {
   const ftcanvas = document.getElementById("first-canvas");
   const ftctx = ftcanvas.getContext("2d");
