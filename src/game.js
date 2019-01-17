@@ -44,7 +44,6 @@ class Game {
       
       if (this.run === 'start') {
         this.annimate =  requestAnimationFrame(this.update);
-        // debugger
         // annimation()
       }
     }
