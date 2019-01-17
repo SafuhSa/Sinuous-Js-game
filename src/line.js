@@ -36,7 +36,6 @@ class Line {
   }
   
   
-  
   drawline(fromx, fromy, toX, toY) {
     this.ctx.strokeStyle = "#4abaa3";
     this.ctx.lineWidth = 3;
