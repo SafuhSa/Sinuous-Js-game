@@ -93,6 +93,18 @@ body {
   font-size: initial;
 }
 
+.menu-header2 {
+  display: flex;
+  justify-content: space-between;
+  font-size: initial;
+  /* border: 2pc solid white; */
+    position: absolute;
+    top: 135px;
+    width: 350px;
+    left: 700px;
+    color: aquamarine;
+}
+
 .instructions {
   font-size: large;
   color: #888787;

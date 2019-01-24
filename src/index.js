@@ -27,11 +27,15 @@ document.addEventListener("DOMContentLoaded", function() {
 
   document.addEventListener('click', function (event) {
     if (event.target.classList.contains("start")) {
-      demo.run = 'pause'
-      game = new Game({ ctx: ctx, canvas: canvasEl, level: 1, demo: false });
-      game.run = 'start';
-      updatehtml(doc, pause, game);
-      game.start();
+      if (!game || game.run == 'restart') {
+        demo.run = 'pause'
+        game = new Game({ ctx: ctx, canvas: canvasEl, level: 1, demo: false });
+        game.run = 'start';
+        updatehtml(doc, pause, game);
+        game.start();
+      } else {
+        document.location.reload();
+      }
       
     } else if (event.target.classList.contains("pause-play") || event.target.classList.contains("fas")) {
         if (!game || game.run == "restart") {
@@ -42,11 +46,13 @@ document.addEventListener("DOMContentLoaded", function() {
               
               if (game.run === "start") {
                 game.run = "pause";
+                updatehtml(doc, pause, game);
+                // document.location.reload()
               } else {
                 game.run = "start";
+                updatehtml(doc, pause, game);
+                game.start();
               }
-              updatehtml(doc, pause, game);
-             game.start();
              // sound.stop()
            }
   });
@@ -69,7 +75,7 @@ function updatehtml(doc, pause, game) {
     
     pause.removeChild(pause.childNodes[0]);
     pause.innerHTML = " || ";
-    
+
   } else {
     
     let icon = document.createElement("I");
