@@ -2,6 +2,7 @@
 
 <head>
   <title>Sinuous </title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
   <script type="application/javascript" src="./dist/main.js"></script>
   <link rel="stylesheet" type="text/css" href="./dist/game.css" media="screen" />
   <script scr='../src/game.js' ></script>
@@ -15,7 +16,7 @@
   <div class="menu">
     <ul class="menu-header">
       <div id='score'>Score</div>
-      <div id='lifes'>lifes: 5</div>
+      <div id='lifes'>lifes: 3</div>
       <div id='time'>Time</div>
     </ul>
     <div class="instructions">
@@ -28,14 +29,14 @@
       </ul>
     </div>
     
-    <button id='start' class="button" >Start</button>
+    <button class="start" >Start</button>
     <div class="level" >Level</div>
-    <button class="button" >Mute</button>
+    <button class="mute" >Mute</button>
   </div>
-  <button id='pause' class="button" > || </button>
+  <button id='pause' class="pause-play" ><i class="fas fa-play"></i></button>
 
-  <div class="game-over">
-    <h2>Game Over</h2>
+  <div id="game-over">
+    <button  class="start">Start</button>
   </div>
 
   <div class="main-body">

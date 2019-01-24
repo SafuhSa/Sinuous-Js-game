@@ -105,7 +105,7 @@ body {
   color: aliceblue;
 }
 
-.button {
+.start, .mute, .pause-play {
   background-color: rgba(0,0,0,-0.5);
   color: white;
   border: none;
@@ -117,13 +117,13 @@ body {
   border: 2px solid green
 }
 
-#pause {
+.pause-play {
     position: absolute;
     top: 125px;
     left: 610px;
 }
 
-.game-over {
+#game-over {
     position: absolute;
     top: 320px;
     left: 960px;
@@ -133,5 +133,10 @@ body {
     color: gray;
     background-color: rgba(0,0,0,0.5);
     border-radius: 13px;
+    border-style: dashed;
     padding: 10px;
+    font-size: -webkit-xxx-large;
+    font-family: fantasy;
+    text-align: -webkit-center;
+    /* display: block;x */
 }

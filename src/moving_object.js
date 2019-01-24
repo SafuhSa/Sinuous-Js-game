@@ -8,6 +8,7 @@ class MovingObject {
     this.ctx = options.ctx;
     this.game = options.game;
     this.demo = options.demo;
+    this.run = options.run
     
     this.arr = this.populate(options.nums)
     this.org = this.arr.length
@@ -16,9 +17,16 @@ class MovingObject {
       this.crl = new Circle ({ ctx: this.ctx, canvas: this.canvas, ball_x: 500, ball_y: 100, radius: 5, color: "#00FFFF", red: false });
       this.line = new Line({ cursor: this.crl, ctx: this.ctx})
       this.canvas.addEventListener('mousemove', this.updateMousePos.bind(this));
+      document.getElementById("game-over").style.display = "none";
     }
-    
-    this.refreshId = setInterval(this.incr.bind(this), 1000 / 2);
+    let mob = this
+    this.refreshId = setInterval(function(){
+      if (mob.run === 'start') {
+        mob.incr.bind(mob)()
+      }
+    },
+       1000 / 2
+      );
     this.update = this.update.bind(this)
   }
 

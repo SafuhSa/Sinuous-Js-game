@@ -3,7 +3,7 @@ const MovingObject = require('./moving_object');
 class Game {
   constructor(options) {
     this.score;
-    this.life = 5;
+    this.life = 3;
     this.level = options.level;
     this.ctx = options.ctx;
     this.canvas = options.canvas;
@@ -15,7 +15,8 @@ class Game {
       canvas: this.canvas,
       game: this,
       nums: 5,
-      demo: options.demo
+      demo: options.demo,
+      run: this.run
 
     });
 
@@ -25,30 +26,36 @@ class Game {
   }
 
   start() {
-     requestAnimationFrame(this.update.bind(this));
-      // this.update()
-      // debugger
+      requestAnimationFrame(this.update.bind(this));
   }
 
 
   update() {
-    
-
       this.fillrec();
       this.moving_objs.update()
-      if (this.run === 'restart' || this.life <= 0) {
-        this.run === 'restart';
-        document.location.reload()
-      }
-      
-      
-      
+      this.gameOver()
+       
       if (this.run === 'start') {
+        this.moving_objs.run = 'start'
         this.annimate =  requestAnimationFrame(this.update);
         // annimation()
       }
+      if (this.run === 'pause') {
+        this.moving_objs.run = 'pause'
+      }
     }
+
     
+    
+    gameOver() {
+      if (this.run === 'restart' || this.life <= 0) {
+        this.run = 'restart';
+        let doc = document.getElementById("game-over")
+        doc.style.display = "block";
+        doc.innerHTML = "Game over";
+        // document.location.reload()
+      }
+    }
 
 
     fillrec(h, w) {
@@ -60,10 +67,9 @@ class Game {
 
       
       this.ctx.drawImage(background, 0, 0, this.canvas.width, this.canvas.height);
-    // }
+    }
     
   }
-}
   module.exports = Game;
   // }
   
