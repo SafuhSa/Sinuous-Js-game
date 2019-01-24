@@ -12,11 +12,13 @@ document.addEventListener("DOMContentLoaded", function() {
   canvasEl.width = 1000;
   canvasEl.height = 600;
 
+  let sound = new Audio('./Track7.mp3');
   // let sound = new Howl ({
   //   src: ['/src/Two.mp3'],
   //   buffer: true,
   //   loop: true
   // })
+  
 
   const demo = new Game({ctx: ctx, canvas: canvasEl, level: 1, demo: 'right_canvas', run: 'start'});
   demo.start()
@@ -32,6 +34,7 @@ document.addEventListener("DOMContentLoaded", function() {
         game = new Game({ ctx: ctx, canvas: canvasEl, level: 1, demo: false });
         game.run = 'start';
         updatehtml(doc, pause, game);
+        sound.play()
         game.start();
       } else {
         document.location.reload();
