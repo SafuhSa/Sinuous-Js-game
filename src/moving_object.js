@@ -27,6 +27,7 @@ class MovingObject {
     },
        1000 / 2
       );
+      
     this.update = this.update.bind(this)
   }
 

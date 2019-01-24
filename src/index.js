@@ -53,7 +53,6 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
-//python -m SimpleHTTPServer
 
 function updatehtml(doc, pause, game) {
   for (let i = 0; i < doc.length; i++) {
@@ -64,14 +63,14 @@ function updatehtml(doc, pause, game) {
       el.innerHTML = 'Start';
     }
   }
-
-
+  
+  
   if (game.run === "start") {
-
+    
     pause.removeChild(pause.childNodes[0]);
     pause.innerHTML = " || ";
   } else {
-
+    
     let icon = document.createElement("I");
     icon.classList.add("fas");
     icon.classList.add("fa-play");
@@ -82,3 +81,5 @@ function updatehtml(doc, pause, game) {
 
 
 console.log("Webpack is working!");
+
+//python -m SimpleHTTPServer
