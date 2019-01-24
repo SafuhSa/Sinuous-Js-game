@@ -69,6 +69,7 @@ function updatehtml(doc, pause, game) {
     
     pause.removeChild(pause.childNodes[0]);
     pause.innerHTML = " || ";
+    
   } else {
     
     let icon = document.createElement("I");
