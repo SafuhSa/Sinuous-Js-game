@@ -7,8 +7,16 @@ html, body, div, span, h1, h2, h3, h4, a, ol, ul, li, form, label, article, asid
   vertical-align: baseline;
 }
 
-body {
+.body {
   line-height: 1.5;
+   /* background-image: url("../imges/space1.jpeg");
+  background-repeat: no-repeat; */
+
+  background: url('../imges/dark-sky.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 ol, ul {
@@ -115,3 +123,15 @@ body {
     left: 610px;
 }
 
+.game-over {
+    position: absolute;
+    top: 320px;
+    left: 960px;
+    height: 60px;
+    width: 300px;
+    border: 2px solid#333333;
+    color: gray;
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 13px;
+    padding: 10px;
+}

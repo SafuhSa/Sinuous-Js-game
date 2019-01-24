@@ -8,6 +8,7 @@ class Game {
     this.ctx = options.ctx;
     this.canvas = options.canvas;
     this.run = options.run;
+    // this.background = new
 
     this.moving_objs = new MovingObject({
       ctx: this.ctx,
@@ -48,13 +49,21 @@ class Game {
       }
     }
     
+
+
     fillrec(h, w) {
-      this.ctx.fillStyle = "black";
+      // this.ctx.fillStyle = "black";
       // this.ctx.fillRect(0, 0, w, h);
-      this.ctx.fillRect(0, 0, this.canvas.width, this.canvas.height);
-    }
+      // this.ctx.fillRect(0, 0, this.canvas.width, this.canvas.height);
+      let background = new Image()
+      background.src = "./imges/dark-sky.jpg"
+
+      
+      this.ctx.drawImage(background, 0, 0, this.canvas.width, this.canvas.height);
+    // }
     
   }
+}
   module.exports = Game;
   // }
   

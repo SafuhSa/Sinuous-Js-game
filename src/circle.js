@@ -40,7 +40,6 @@ class Circle {
 
   draw() {
     this.ctx.fillStyle = this.color;
-
     this.ctx.beginPath();
 
     this.ctx.arc(this.ball_x, this.ball_y, this.radius, 0, 2 * Math.PI, true);

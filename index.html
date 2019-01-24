@@ -7,7 +7,7 @@
   <script scr='../src/game.js' ></script>
 </head>
 
-<body>
+<body class="body">
   <div class="header">
     <strong>Sinuous</strong> is a javascript game lovely and easy to play. Use your mouse to guide your serpentine cursor safely through the field
     of red dots, snagging power ups to get various boosts and increase that all-powerful high-score.
@@ -33,8 +33,13 @@
     <button class="button" >Mute</button>
   </div>
   <button id='pause' class="button" > || </button>
-    <div class="main-body">
-      <canvas id='first-canvas'></canvas>
+
+  <div class="game-over">
+    <h2>Game Over</h2>
+  </div>
+
+  <div class="main-body">
+    <canvas id='first-canvas'></canvas>
       </canvas>
       <canvas id="game-canvas"></canvas>
     </div>
