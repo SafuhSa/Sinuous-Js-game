@@ -37,24 +37,29 @@ body {
 
 .header {
   /* border: 2px solid yellow;; */
-  font-size: 20px;
-  padding: 10px;
-  padding-left: 25px;
-  text-align: left;
+  font-size: xx-large;
+  padding: 8px;
+  text-align: center;
   height: 60px;
-  color: aquamarine;
-  /* text-align: center; */
+  color: darkgrey;
 }
 
+.footer {
+  /* border: 2px solid yellow; */
+  color: darkgrey;
+  font-size: 25px;
+  margin: 2%;
+}
 
 .main-body {
+  /* border: 2px solid green; */
   display: flex;
   justify-content: space-around;
   margin-top: 40px;
 
     width: 100%;
     /* border: 5px solid beige; */
-    height: 100%;
+    /* height: 100%; */
 }
 
 .leftcon {
@@ -117,8 +122,8 @@ body {
   justify-content: space-between;
   font-size: initial;
   /* border: 2pc solid white; */
-    width: 350px;
-    color: aquamarine;
+  width: 350px;
+  color: darkgrey;
 }
 
 .instructions {
@@ -144,7 +149,18 @@ body {
 
 
 .level {
-  border: 2px solid green
+  /* border: 2px solid green */
+    font-size: 28px;
+    padding-left: 6px;
+    color: white;
+    font-size: x-large;
+    display: flex;
+    justify-content: space-between;
+}
+.level-buttons {
+    margin-top: auto;
+    margin-bottom: auto;
+  /* justify-self: auto; */
 }
 
 /* .pause-play,  */
