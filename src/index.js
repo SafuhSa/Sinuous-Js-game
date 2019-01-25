@@ -23,12 +23,12 @@ document.addEventListener("DOMContentLoaded", function() {
   let game;
   let doc = document.getElementsByClassName('start');
   let pause = document.getElementById("pause")
-  
+  let level = 1
   document.addEventListener('click', function (event) {
     if (event.target.classList.contains("start")) {
       if (!game || game.run == 'restart') {
         demo.run = 'pause'
-        game = new Game({ ctx: ctx, canvas: canvasEl, level: 1, demo: false });
+        game = new Game({ ctx: ctx, canvas: canvasEl, level: level, demo: false });
         game.run = 'start';
         updatehtml(doc, pause, game);
         game.start();
@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", function() {
                game.start();
              }
              // audio.stop()
-           } else if (event.target.classList.contains("fa-volume-mute") || event.target.classList.contains("fa-volume-up") ) {
+    } else if (event.target.classList.contains("fa-volume-mute") || event.target.classList.contains("fa-volume-up") ) {
              let mute = document.getElementsByClassName("mute")[0];
              let icon = document.createElement("I");
              icon.classList.add("fas");
@@ -82,7 +82,15 @@ document.addEventListener("DOMContentLoaded", function() {
                mute.removeChild(mute.childNodes[0]);
                mute.appendChild(icon);
              }
-           }
+    } else if (event.target.classList.contains("level-btns")) {
+      let btns = document.getElementsByClassName("level-btns");
+      for (let i = 0; i < btns.length; i++) {
+        const el = btns[i];
+        el.style.backgroundColor = "#333333";
+      }
+      event.target.style.backgroundColor = "red";
+      level = event.target.getAttribute("key") * 5;
+    }
   });
 });
 

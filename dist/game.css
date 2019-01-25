@@ -162,6 +162,9 @@ body {
     margin-bottom: auto;
   /* justify-self: auto; */
 }
+.level-buttons.one {
+
+}
 
 /* .pause-play,  */
 /* .fa-play:before  */
@@ -195,3 +198,12 @@ body {
   justify-content: space-between;
 }
 
+.level-btns {
+    background-color: #333333;
+    color: white;
+    border: none;
+    margin: 1px;
+}
+.level-btns.one {
+  background-color: red;
+}

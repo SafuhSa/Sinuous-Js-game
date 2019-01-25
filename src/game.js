@@ -17,7 +17,7 @@ class Game {
       ctx: this.ctx,
       canvas: this.canvas,
       game: this,
-      nums: 5,
+      nums: this.level,
       demo: options.demo,
       run: this.run
 
