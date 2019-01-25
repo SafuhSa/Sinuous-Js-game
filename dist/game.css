@@ -36,7 +36,7 @@ body {
 }
 
 .header {
-  /* border: 2px solid black; */
+  /* border: 2px solid yellow;; */
   font-size: 20px;
   padding: 10px;
   padding-left: 25px;
@@ -53,17 +53,21 @@ body {
   margin-top: 40px;
 
     width: 100%;
-    border: 5px solid beige;
+    /* border: 5px solid beige; */
     height: 100%;
 }
 
 .leftcon {
-  border: 2px solid yellow;
-  width: 400px;
+    position: relative;
+    /* border: 2px solid yellow; */
+    height: 610px;
+    width: 355px;
 }
 .rightcon {
-  border: 2px solid green;
-  width: 1100px;
+  position: relative;
+  /* border: 2px solid green; */
+  height: 610px;
+  width: 1010px;
 }
 
 #first-canvas {
@@ -72,26 +76,22 @@ body {
     border: 6px #333333 solid;
     margin: auto;
     height: 600px;
-    z-index: -1;
-    opacity: 0;
 }
 
 
 #game-canvas {
-    /* position: absolute; */
     cursor: crosshair;
     background-color: #111111;
     border: 6px #333333 solid;
     border-radius: 4px;
     margin: auto;
-    opacity: 0;
 }
 
 .menu {
   position: absolute;
-  top: 200px;
-  left: 95px;
-  margin: auto;
+  top: 10%;
+  left: 5%;
+  /* margin: auto; */
   border: 2px solid#333333;
   display: flex;
   color: gray;
@@ -100,8 +100,6 @@ body {
   padding: 10;
   width: 300px;
   border-radius: 13px;
-  z-index: 1;
-  opacity: 0;
 }
 
 
@@ -112,14 +110,14 @@ body {
 }
 
 .menu-header2 {
+  position: absolute;
+  top: 3%;
+  left: 10%;
   display: flex;
   justify-content: space-between;
   font-size: initial;
   /* border: 2pc solid white; */
-    position: absolute;
-    top: 135px;
     width: 350px;
-    left: 700px;
     color: aquamarine;
 }
 
@@ -153,14 +151,14 @@ body {
 /* .fa-play:before  */
 #pause {
     position: absolute;
-    top: 125px;
-    left: 610px;
+    top: 1%;
+    left: 2%;
 }
 
 #game-over {
     position: absolute;
-    top: 320px;
-    left: 960px;
+    top: 40%;
+    left: 35%;
     height: 60px;
     width: 300px;
     border: 2px solid#333333;
