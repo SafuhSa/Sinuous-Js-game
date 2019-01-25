@@ -36,30 +36,46 @@ body {
 }
 
 .header {
-  border: 2px solid black;
-  font-size: larger;
+  /* border: 2px solid black; */
+  font-size: 20px;
   padding: 10px;
-  text-align: center;
+  padding-left: 25px;
+  text-align: left;
   height: 60px;
-
+  color: aquamarine;
+  /* text-align: center; */
 }
+
 
 .main-body {
   display: flex;
-  flex-direction: row;
+  justify-content: space-around;
   margin-top: 40px;
+
+    width: 100%;
+    border: 5px solid beige;
+    height: 100%;
+}
+
+.leftcon {
+  border: 2px solid yellow;
+  width: 400px;
+}
+.rightcon {
+  border: 2px solid green;
+  width: 1100px;
 }
 
 #first-canvas {
     width: 350px;
     background-color: #222222;
-    /* background-color: red; */
     border: 6px #333333 solid;
     margin: auto;
     height: 600px;
-    /* top: 70;
-    left: 90; */
+    z-index: -1;
+    opacity: 0;
 }
+
 
 #game-canvas {
     /* position: absolute; */
@@ -68,7 +84,7 @@ body {
     border: 6px #333333 solid;
     border-radius: 4px;
     margin: auto;
-    /* display: none; */
+    opacity: 0;
 }
 
 .menu {
@@ -84,6 +100,8 @@ body {
   padding: 10;
   width: 300px;
   border-radius: 13px;
+  z-index: 1;
+  opacity: 0;
 }
 
 
@@ -117,7 +135,7 @@ body {
   color: aliceblue;
 }
 
-.start, .mute, .pause-play {
+.start, .mute, #pause {
   background-color: rgba(0,0,0,-0.5);
   color: white;
   border: none;
@@ -125,11 +143,15 @@ body {
   text-align: left;
   margin-top: 10px;
 }
+
+
 .level {
   border: 2px solid green
 }
 
-.pause-play {
+/* .pause-play,  */
+/* .fa-play:before  */
+#pause {
     position: absolute;
     top: 125px;
     left: 610px;
@@ -152,3 +174,10 @@ body {
     text-align: -webkit-center;
     /* display: block;x */
 }
+
+.startmute {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+

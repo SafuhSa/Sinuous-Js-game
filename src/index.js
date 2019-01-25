@@ -1,23 +1,20 @@
 const Game = require("./game");
 import { Howl } from 'howler';
 import _ from 'lodash';
+
 document.addEventListener("DOMContentLoaded", function() {
   const ftcanvas = document.getElementById("first-canvas");
   const ftctx = ftcanvas.getContext("2d");
   const fake = new Game({ ctx: ftctx, canvas: ftcanvas, level: 2, demo: 'left_canvas', run: 'start' })
   fake.start()
-
+  
   const canvasEl = document.getElementById("game-canvas");
   const ctx = canvasEl.getContext("2d");
   canvasEl.width = 1000;
   canvasEl.height = 600;
+  let audio = new Audio("./Track7.mp3");
+  let sound = false;
 
-  let sound = new Audio('./Track7.mp3');
-  // let sound = new Howl ({
-  //   src: ['/src/Two.mp3'],
-  //   buffer: true,
-  //   loop: true
-  // })
   
 
   const demo = new Game({ctx: ctx, canvas: canvasEl, level: 1, demo: 'right_canvas', run: 'start'});
@@ -26,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function() {
   let game;
   let doc = document.getElementsByClassName('start');
   let pause = document.getElementById("pause")
-
+  
   document.addEventListener('click', function (event) {
     if (event.target.classList.contains("start")) {
       if (!game || game.run == 'restart') {
@@ -34,29 +31,57 @@ document.addEventListener("DOMContentLoaded", function() {
         game = new Game({ ctx: ctx, canvas: canvasEl, level: 1, demo: false });
         game.run = 'start';
         updatehtml(doc, pause, game);
-        sound.play()
         game.start();
+        audio.play();
+        sound = true;
       } else {
         document.location.reload();
       }
       
-    } else if (event.target.classList.contains("pause-play") || event.target.classList.contains("fas")) {
-        if (!game || game.run == "restart") {
+    } else if (event.target.classList.contains("fa-play") || event.target.id === "pause") {
+             if (!game || game.run == "restart") {
                demo.run = "pause";
-               game = new Game({ ctx: ctx, canvas: canvasEl, level: 1, demo: false });
-              }
-              
-              
-              if (game.run === "start") {
-                game.run = "pause";
-                updatehtml(doc, pause, game);
-                // document.location.reload()
-              } else {
-                game.run = "start";
-                updatehtml(doc, pause, game);
-                game.start();
-              }
-             // sound.stop()
+               game = new Game({
+                 ctx: ctx,
+                 canvas: canvasEl,
+                 level: 1,
+                 demo: false
+               });
+               audio.play();
+               sound = true;
+             }
+
+             if (game.run === "start") {
+               game.run = "pause";
+               updatehtml(doc, pause, game);
+               audio.pause();
+               // document.location.reload()
+             } else {
+               game.run = "start";
+               updatehtml(doc, pause, game);
+               if (sound) audio.play();
+               game.start();
+             }
+             // audio.stop()
+           } else if (event.target.classList.contains("fa-volume-mute") || event.target.classList.contains("fa-volume-up") ) {
+             let mute = document.getElementsByClassName("mute")[0];
+             let icon = document.createElement("I");
+             icon.classList.add("fas");
+             if (sound) {
+               sound = false;
+               audio.pause();
+               icon.classList.add("fa-volume-mute");
+               mute.removeChild(mute.childNodes[0]);
+               mute.appendChild(icon);
+               // < i class="fas fa-volume-up" ></i >
+             } else {
+               sound = true;
+               audio.play();
+
+               icon.classList.add("fa-volume-up");
+               mute.removeChild(mute.childNodes[0]);
+               mute.appendChild(icon);
+             }
            }
   });
 });
@@ -75,13 +100,15 @@ function updatehtml(doc, pause, game) {
   
   
   if (game.run === "start") {
-    
+    // let p = document.createElement("P");
+    // p.classList.add('')
     pause.removeChild(pause.childNodes[0]);
     pause.innerHTML = " || ";
 
   } else {
     
     let icon = document.createElement("I");
+    // icon
     icon.classList.add("fas");
     icon.classList.add("fa-play");
     pause.removeChild(pause.childNodes[0]);
@@ -91,5 +118,3 @@ function updatehtml(doc, pause, game) {
 
 
 console.log("Webpack is working!");
-
-//python -m SimpleHTTPServer
