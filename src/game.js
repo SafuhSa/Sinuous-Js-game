@@ -11,7 +11,6 @@ class Game {
     this.canvas = options.canvas;
     this.run = options.run;
     this.demo = options.demo
-    // this.background = new
 
     this.moving_objs = new MovingObject({
       ctx: this.ctx,

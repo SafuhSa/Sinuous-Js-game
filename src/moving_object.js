@@ -11,7 +11,7 @@ class MovingObject {
     this.run = options.run;
     this.audio = new Audio("./explosion.mp3");
 
-    this.arr = this.populate(options.nums);
+    this.arr = this.populate(options.nums * 5);
     this.org = this.arr.length;
 
     if (!this.demo) {
@@ -118,7 +118,7 @@ class MovingObject {
     let circle;
     let radius;
     if (this.demo === "left_canvas") {
-      radius = 2.5;
+      radius = 2;
     } else {
       radius = 5;
     }

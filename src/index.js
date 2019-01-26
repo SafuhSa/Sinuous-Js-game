@@ -4,7 +4,7 @@ import _ from 'lodash';
 document.addEventListener("DOMContentLoaded", function() {
   const ftcanvas = document.getElementById("first-canvas");
   const ftctx = ftcanvas.getContext("2d");
-  const fake = new Game({ ctx: ftctx, canvas: ftcanvas, level: 2, demo: 'left_canvas', run: 'start' })
+  const fake = new Game({ ctx: ftctx, canvas: ftcanvas, level: 1, demo: 'left_canvas', run: 'start' })
   fake.start()
   
   const canvasEl = document.getElementById("game-canvas");
@@ -88,7 +88,7 @@ document.addEventListener("DOMContentLoaded", function() {
         el.style.backgroundColor = "#333333";
       }
       event.target.style.backgroundColor = "red";
-      level = event.target.getAttribute("key") * 5;
+      level = event.target.getAttribute("key") * 1;
     }
   });
 });
