@@ -9,6 +9,7 @@ class MovingObject {
     this.game = options.game;
     this.demo = options.demo;
     this.run = options.run;
+    this.audio = new Audio("./explosion.mp3");
 
     this.arr = this.populate(options.nums);
     this.org = this.arr.length;
@@ -61,6 +62,7 @@ class MovingObject {
     if (dis <= both_rds) {
       this.game.life -= 1;
       this.date = Date.now();
+      this.audio.play()
       this.drawExplosion(red_bl.ball_x, red_bl.ball_y, 5, "#FFD700");
     }
   }

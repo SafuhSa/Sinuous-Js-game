@@ -37,15 +37,18 @@ body {
 
 .header {
   /* border: 2px solid yellow;; */
+  font-family: fantasy;
   font-size: xx-large;
   padding: 8px;
   text-align: center;
   height: 60px;
   color: darkgrey;
+  text-shadow: 4px 4px 8px limegreen;
 }
 
 .footer {
   /* border: 2px solid yellow; */
+  font-family: fantasy;
   color: darkgrey;
   font-size: 25px;
   margin: 2%;
@@ -65,8 +68,9 @@ body {
 .leftcon {
     position: relative;
     /* border: 2px solid yellow; */
-    height: 610px;
-    width: 355px;
+    /* height: 610px; */
+    /* width: 355px; */
+    width: 440px;
 }
 .rightcon {
   position: relative;
@@ -76,7 +80,8 @@ body {
 }
 
 #first-canvas {
-    width: 350px;
+    /* width: 350px; */
+    width: 430px;
     background-color: #222222;
     border: 6px #333333 solid;
     margin: auto;
@@ -94,8 +99,9 @@ body {
 
 .menu {
   position: absolute;
-  top: 10%;
-  left: 5%;
+  top: 8%;
+  left: 8%;
+  /* left: 5%; */
   /* margin: auto; */
   border: 2px solid#333333;
   display: flex;
@@ -103,8 +109,10 @@ body {
   flex-direction: column;
   background-color:rgba(0,0,0,0.5);
   padding: 10;
-  width: 300px;
+  /* width: 300px; */
+  width: 332px;
   border-radius: 13px;
+  font-family: fantasy;
 }
 
 
@@ -112,6 +120,7 @@ body {
   display: flex;
   justify-content: space-between;
   font-size: initial;
+  font-family: fantasy;
 }
 
 .menu-header2 {
@@ -124,11 +133,13 @@ body {
   /* border: 2pc solid white; */
   width: 350px;
   color: darkgrey;
+  font-family: fantasy;
 }
 
 .instructions {
   font-size: large;
   color: #888787;
+  font-family: fantasy;
 }
 
 .instructions h1 {
@@ -139,6 +150,7 @@ body {
 }
 
 .start, .mute, #pause {
+  font-family: fantasy;
   background-color: rgba(0,0,0,-0.5);
   color: white;
   border: none;
@@ -161,9 +173,6 @@ body {
     margin-top: auto;
     margin-bottom: auto;
   /* justify-self: auto; */
-}
-.level-buttons.one {
-
 }
 
 /* .pause-play,  */
@@ -206,4 +215,39 @@ body {
 }
 .level-btns.one {
   background-color: red;
+}
+
+.github {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 27px;
+    color: white;
+    position: absolute;
+    top: 65%;
+    left: 60%;
+    color: darkgrey;
+    text-decoration: none;
+    font-family: fantasy;
+}
+
+.fa-github{
+font-size: 120px;
+}
+.fa-linkedin {
+font-size: 105px;
+}
+
+.linkedin {
+   display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 27px;
+    color: white;
+    position: absolute;
+    top: 67%;
+    left: 15%;
+    color: darkgrey;
+    text-decoration: none;  
+    font-family: fantasy;
 }
