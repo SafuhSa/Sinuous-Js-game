@@ -49,7 +49,7 @@ class MovingObject {
   }
 
   collision(red_bl) {
-    if (Date.now() - this.date <= 1000) {
+    if (Date.now() - this.date <= 700) {
       this.drawExplosion(red_bl.ball_x, red_bl.ball_y, 5, "#FFD700");
       return null;
     }

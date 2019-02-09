@@ -47,7 +47,8 @@ class Circle {
   
 
   move() {
-    if (this.ball_x <= 0 || this.ball_y >= 600) {
+    if (this.ball_x <= 0 || this.ball_y >= this.canvas.height) {
+      // debugger
       let pos = this.getrandom(this.ball_x, this.ball_y);
       this.ball_x = pos[0]; //this.canvas.width;
       this.ball_y = pos[1]; //0;
@@ -62,7 +63,7 @@ class Circle {
     let new_y;
     let new_x;
 
-    if (x <= 0 && y >= 600) {
+    if (x <= 0 && y >= this.canvas.height) {
       new_x = this.canvas.width;
       new_y = 0;
     } else if (x <= 0) {

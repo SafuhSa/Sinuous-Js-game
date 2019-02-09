@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function() {
   
   const canvasEl = document.getElementById("game-canvas");
   const ctx = canvasEl.getContext("2d");
-  canvasEl.width = 1000;
+  canvasEl.width = 500;
   canvasEl.height = 600;
   let audio = new Audio("./Track7.mp3");
   let sound = false;
