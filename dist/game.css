@@ -227,11 +227,13 @@ body {
 
 .fa-github{
 /* font-size: 120px; */
-font-size: 90px;
+/* font-size: 90px; */
+font-size: 300%;
 }
 .fa-linkedin {
 /* font-size: 105px; */
-font-size: 80px;
+/* font-size: 80px; */
+font-size: 280%;
 }
 
 .linkedin {
