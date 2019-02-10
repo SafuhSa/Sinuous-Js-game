@@ -116,12 +116,7 @@ class MovingObject {
     let arr = [];
     let obj;
     let circle;
-    let radius;
-    if (this.demo === "left_canvas") {
-      radius = 2;
-    } else {
-      radius = 5;
-    }
+    let radius = 5
 
     for (let i = 0; i < xs.length; i++) {
       const x = xs[i];

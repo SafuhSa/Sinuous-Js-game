@@ -4,13 +4,17 @@ import _ from 'lodash';
 document.addEventListener("DOMContentLoaded", function() {
   const ftcanvas = document.getElementById("first-canvas");
   const ftctx = ftcanvas.getContext("2d");
+  ftcanvas.width = window.innerWidth / 3.9;
+  ftcanvas.height = window.innerHeight / 1.58
   const fake = new Game({ ctx: ftctx, canvas: ftcanvas, level: 1, demo: 'left_canvas', run: 'start' })
   fake.start()
   
   const canvasEl = document.getElementById("game-canvas");
   const ctx = canvasEl.getContext("2d");
-  canvasEl.width = 500;
-  canvasEl.height = 600;
+  // canvasEl.width = 1000;
+  // canvasEl.height = 600;
+  canvasEl.width = window.innerWidth / 1.68;
+  canvasEl.height = window.innerHeight / 1.58;
   let audio = new Audio("./Track7.mp3");
   let sound = false;
 

@@ -43,7 +43,7 @@ body {
   text-align: center;
   height: 60px;
   color: darkgrey;
-  text-shadow: 4px 4px 8px limegreen;
+  /* text-shadow: 4px 4px 8px limegreen; */
 }
 
 .footer {
@@ -62,30 +62,23 @@ body {
 
     width: 100%;
     /* border: 5px solid beige; */
-    /* height: 100%; */
 }
 
 .leftcon {
     position: relative;
     /* border: 2px solid yellow; */
-    /* height: 610px; */
-    /* width: 355px; */
-    width: 440px;
+    /* width: 25.6vw; */
 }
 .rightcon {
   position: relative;
-  /* border: 2px solid green; */
-  height: 610px;
-  width: 1010px;
+  border: 2px solid green;
+  /* width: 60vw; */
 }
 
 #first-canvas {
-    /* width: 350px; */
-    width: 430px;
     background-color: #222222;
     border: 6px #333333 solid;
     margin: auto;
-    height: 600px;
 }
 
 
@@ -109,8 +102,8 @@ body {
   flex-direction: column;
   background-color:rgba(0,0,0,0.5);
   padding: 10;
-  /* width: 300px; */
-  width: 332px;
+  /* width: 332px; */
+  width: 80%;
   border-radius: 13px;
   font-family: fantasy;
 }
@@ -224,7 +217,8 @@ body {
     font-size: 27px;
     color: white;
     position: absolute;
-    top: 65%;
+    /* top: 65%; */
+    bottom: 1%;
     left: 60%;
     color: darkgrey;
     text-decoration: none;
@@ -232,10 +226,12 @@ body {
 }
 
 .fa-github{
-font-size: 120px;
+/* font-size: 120px; */
+font-size: 90px;
 }
 .fa-linkedin {
-font-size: 105px;
+/* font-size: 105px; */
+font-size: 80px;
 }
 
 .linkedin {
@@ -245,7 +241,8 @@ font-size: 105px;
     font-size: 27px;
     color: white;
     position: absolute;
-    top: 67%;
+    /* top: 67%; */
+    bottom: 1%;
     left: 15%;
     color: darkgrey;
     text-decoration: none;  
