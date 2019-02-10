@@ -43,7 +43,7 @@ body {
   text-align: center;
   height: 60px;
   color: darkgrey;
-  /* text-shadow: 4px 4px 8px limegreen; */
+  text-shadow: 4px 4px 8px limegreen;
 }
 
 .footer {
@@ -71,7 +71,7 @@ body {
 }
 .rightcon {
   position: relative;
-  border: 2px solid green;
+  /* border: 2px solid green; */
   /* width: 60vw; */
 }
 
