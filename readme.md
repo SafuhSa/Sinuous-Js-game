@@ -19,6 +19,13 @@
 Use your mouse to guide your serpentine cursor safely through the field of red dots, snagging power ups to get various boosts and increase that all-powerful high-score. The longer you play, the more green dots will appear on your trail, which will let you sustain more direct hits.
 
 
+Instructions
+1. Avoid red dots.
+2. Hit other blue dots for boosts.
+3. Score extra points by moving around a lot.
+4. Stay alive.
+
+
 ### Demo
 [Sinuous Live](https://safuhsa.github.io/Sinuous-Js-game/)
 
