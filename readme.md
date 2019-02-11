@@ -9,7 +9,7 @@
   - [Game Over](#game-over)
 - [Feature Highlights](#feature-highlights)
   - [Collision Detection](#collision-detection)
-  - [Animate a line in after effects (mouse movement)](#Animate-a-line-in-after-effects-(mouse movement))
+  - [Animate a line in after effects mouse movement](#animate-a-line-in-after-effects-mouse-movement)
   - [canvas on different screen sizes](#canvas-on-different-screen-sizes)
 
 ## Background and Overview
