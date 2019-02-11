@@ -30,13 +30,13 @@ Sinuous was built with pure `Javascript` and no external libraries. All game ren
 
 ### Landing Page
 
-Sinuous is currently work on all modern browsers.
+Sinuous is currently work on all modern browsers and Ipads as well .
 
 ![](./images/start.png)
 
 ### In Game
 
-While playing, red dots will flash and by time increase speed through incrementing the velocity of moving objects.
+While playing, red dots will flash and they increase speed with time through incrementing the velocity of moving objects.
 
 ![](./images/ingame.png)
 
@@ -50,7 +50,7 @@ Upon game death, red dots will explodes flashing, the menu will reappear with yo
 
 ### Collision Detection
 
-The game detects Serpentine and red dots collision by comparing the distance between the two objects and the sum of their square radius. If the sum is greater than the distance, the method Collided(red_ball) would take one live of the user session and would drawexplosion. Also this.date is update it to give the user free short time before he collide with another object.
+The game detects Serpentine and red dots Collied by comparing the distance between the two objects by the sum of their square radius then square rooting the result. If the result is greater than the distance, the method collision(red_ball) would take one live of the user game session and would draw an explosion. Also this.date is update it to give the user a free short time before he collide with another object.
 
 ```
   collision(red_bl) {
@@ -74,7 +74,7 @@ The game detects Serpentine and red dots collision by comparing the distance bet
 
 ```
 ### draw explosion on collisions
- When Serpentine collide with any red dots the game will draw an explosion!!
+ When Serpentine collide with any red dots the game will draw a flashing explosion by adding shadowoffset by x and y of the dot!!
 ```
  drawExplosion(x, y, radius, color) {
     this.ctx.shadowBlur = 8;
@@ -91,7 +91,7 @@ The game detects Serpentine and red dots collision by comparing the distance bet
 ```
 
 ### Animate a line in after effects (mouse movement)
-the game render the players trail as an array of small lines connected together. drawline function will draw each small line then their position get updated with updatePos function as it map over the array of lines.
+Game will render the players trail as an array of small lines connected together. drawline function will draw each small line then their positions get updated by updatePos function as it map over the array of lines.
 
 ```
   drawline(fromx, fromy, toX, toY) {
@@ -131,7 +131,7 @@ the game render the players trail as an array of small lines connected together.
 ```
 
 ### Canvas on different screen sizes
- Canvas will rezies on different users screen sized by giving the canvas a height and width as a portion of user window size
+ Canvas adjust on different users screen size by giving the canvas a height and width as a portion of user window size
 ```
 const canvasEl = document.getElementById("game-canvas");
   const ctx = canvasEl.getContext("2d");
@@ -139,7 +139,7 @@ const canvasEl = document.getElementById("game-canvas");
   canvasEl.height = window.innerHeight / 1.58;
 ```
 ### Start, pause, restart!!
-The Game having one event listener for any clicks on any buttons wether was it mutes, pause, or even restart the game with multiple if statements to determine the appropriate action. 
+The Game have one EventListener for any clicks on any buttons wether it was mutes, pause, or even restart the game with multiple if statements to determine the appropriate action. 
 ```
 document.addEventListener('click', function (event) {
     if (event.target.classList.contains("start")) {}
@@ -148,4 +148,5 @@ document.addEventListener('click', function (event) {
     ..
 ```
 
+[Back to Top](#)
 [Back to Top](#)
