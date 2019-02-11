@@ -9,8 +9,8 @@
   - [Game Over](#game-over)
 - [Feature Highlights](#feature-highlights)
   - [Collision Detection](#collision-detection)
-  - [Particles and Notifications](#particles-and-notifications)
-  - [Multiplier](#multiplier)
+  - [Animate a line in after effects (mouse movement)](#Animate-a-line-in-after-effects-(mouse movement))
+  - [canvas on different screen sizes](#canvas-on-different-screen-sizes)
 
 ## Background and Overview
 
