@@ -39,11 +39,7 @@ class Line {
   drawline(fromx, fromy, toX, toY) {
     this.ctx.strokeStyle = "#4abaa3";
     this.ctx.lineWidth = 3;
-
-    // this.ctx.fillStyle = "#4abaa3";
-    // this.ctx.beginPath();
-    // this.ctx.arc(fromx, fromy, 2, 0, 2 * Math.PI, true);
-    // this.ctx.fill();
+    
     const sdb =  this.ctx.shadowBlur;
     const sdc =  this.ctx.shadowColor;
     const sdx = this.ctx.shadowOffsetX;

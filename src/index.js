@@ -11,8 +11,6 @@ document.addEventListener("DOMContentLoaded", function() {
   
   const canvasEl = document.getElementById("game-canvas");
   const ctx = canvasEl.getContext("2d");
-  // canvasEl.width = 1000;
-  // canvasEl.height = 600;
   canvasEl.width = window.innerWidth / 1.68;
   canvasEl.height = window.innerHeight / 1.58;
   let audio = new Audio("./Track7.mp3");
