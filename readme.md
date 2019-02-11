@@ -1,91 +1,151 @@
-# Sinuous Game
+
+# Table of Contents
+- [Background and Overview](#background-and-overview)
+  - [Demo](#demo)
+- [Technologies](#technologies)
+- [Site](#site)
+  - [Landing Page](#landing-page)
+  - [In-Game](#in-game)
+  - [Game Over](#game-over)
+- [Feature Highlights](#feature-highlights)
+  - [Handle Enclosures](#handle-enclosures)
+  - [Particles and Notifications](#particles-and-notifications)
+  - [Multiplier](#multiplier)
 
 ## Background and Overview
- Sinuous is a game that show the power of Javascript. Users navigate through a field of red spots that are moving towards you in ever-increasing quantities and speed. The game uses HTML5 canvas for the graphics.
+
+ Sinuous is a game that show the power of Javascript. focus isnavigate through a field of red spots that are moving towards you in ever-increasing quantities and speed. The game uses HTML5 canvas for the graphics.
 
 Use your mouse to guide your serpentine cursor safely through the field of red dots, snagging power ups to get various boosts and increase that all-powerful high-score. The longer you play, the more green dots will appear on your trail, which will let you sustain more direct hits.
 
-[sinuousgame Live](https://safuhsa.github.io/Sinuous-Js-game/)
 
-Instructions
-1. Avoid red dots.
-2. Hit other dots for boosts.
-3. Score extra points by moving around a lot.
-4. Stay alive.
+### Demo
+[Sinuous Live](https://safuhsa.github.io/Sinuous-Js-game/)
 
-### Functionality & MVP  
+## Technologies
 
-- [ ] Create asteroids of custom size, color.
-- [ ] Hear sounds on collisions
-- [ ] Animate a line in after effects (mouse movement)
-- [ ] Start, pause, restart!!
-- [ ] have various boosts and increase power ups that all-powerful high-score.
-- [ ] Have differents levels
+Sinuous was built with pure `Javascript` and no external libraries. All game rendering and styling was done with `HTML5 Canvas`
 
-### Wireframes
+## Site
 
-This app will consist of a single screen with the simulation canvas, playback controls, probabilities controls and nav links to the Github, my LinkedIn.  
+### Landing Page
 
-Playback controls along the top will include Start, Pause and Restart buttons.
+Sinuous is currently work on all modern browsers.
 
-On the left near the bottom, will be an expandable menu allowing users to select the 'levels'.
+![](./images/start.png)
 
-![](https://cdn.mos.cms.futurecdn.net/48a163f8291af724f141cce1e9d60034-650-80.jpg)
+### In Game
 
-### Architecture and Technologies
+While playing, red dots will flash and by time increase speed through incrementing the velocity of moving objects.
 
-This project will be implemented with the following technologies:
+![](./images/ingame.png)
 
-- Vanilla JavaScript for overall structure and game logic,
-- `HTML5 Canvas` for DOM manipulation and rendering,
-- `Web Audio API` for sound generation, processing and control. `WebAudioAPI` allows for simultaneous sounds with more dependable time triggering.
-- Webpack to bundle and serve up the various scripts.
+### Game Over
 
-In addition to the webpack entry file, there will be four scripts involved in this project:
+Upon game death, red dots will explodes flashing, the menu will reappear with your score.
 
-`board.js`: this script will handle the logic for creating and updating the necessary DOM elements.
+![](./images/gameover.png)
 
-`sinuous.js`: this script will house the physics logic for the Sinuous.
+## Feature Highlights
 
-`evolutions.js`: this lightweight script will house the constructor and update functions for the `Evolutions` objects.  
+### Collision Detection
 
-![](https://tutorialzine.com/media/2015/01/sinuous.jpg)
+The game detects Serpentine and red dots collision by comparing the distance between the two objects and the sum of their square radius. If the sum is greater than the distance, the method Collided(red_ball) would take one live of the user session and would drawexplosion. Also this.date is update it to give the user free short time before he collide with another object.
 
-### Implementation Timeline
+```
+  collision(red_bl) {
+    if (Date.now() - this.date <= 700) {
+      this.drawExplosion(red_bl.ball_x, red_bl.ball_y, 5, "#FFD700");
+      return null;
+    }
 
-**Day 1**: 
-Setup all necessary Node modules, including getting webpack up and running.  Create `webpack.config.js` as well as `package.json`.  Write a basic entry file and the bare bones of all 4 scripts outlined above.  L  Goals for the day:
+    let dif_x = Math.pow(red_bl.ball_x - this.crl.ball_x, 2);
+    let dif_y = Math.pow(red_bl.ball_y - this.crl.ball_y, 2);
+    let dis = Math.sqrt(dif_x + dif_y);
+    let both_rds = red_bl.radius + this.crl.radius;
 
-- [x] Get `webpack` serving files and frame out index.html
-- [x] Learn how to create a sound on collision.
+    if (dis <= both_rds) {
+      this.game.live -= 1;
+      this.date = Date.now();
+      this.audio.play()
+      this.drawExplosion(red_bl.ball_x, red_bl.ball_y, 5, "#FFD700");
+    }
+  }
 
-**Day 2**: 
-- [x] Finished momentum collision physics.
-- [x] Completed WebAudioAPI Tutorial and loaded basic sound from static assets
+```
+### draw explosion on collisions
+ When Serpentine collide with any red dots the game will draw an explosion!!
+```
+ drawExplosion(x, y, radius, color) {
+    this.ctx.shadowBlur = 8;
+    this.ctx.shadowColor = "gold";
+    this.ctx.shadowOffsetX = 3;
+    this.ctx.shadowOffsetY = -3;
 
+    this.ctx.fillStyle = color;
+    this.ctx.beginPath();
+    this.ctx.arc(x, y, radius, 0, 2 * Math.PI, true);
+    this.ctx.fill();
+  }
 
-**Day 3**: 
-Build out the `AudioEvent` object to connect to the `Board` object.  Then, use `board.js` to create and render `Sinuous`s and `AudioEvent`s. Goals for the day:
+```
 
-- [x] Complete the `Sinuous.js` module (constructor, update functions, colors)
-- [x] Get sounds to play on collisions
-- [x] Get collision graphics working
-- [x] Make the `Sinuous`s able to be movable with mouse.
+### Animate a line in after effects (mouse movement)
+the game render the players trail as an array of small lines connected together. drawline function will draw each small line then their position get updated with updatePos function as it map over the array of lines.
 
-**Day 4**:
-Create the logic. Build out functions for handling the different evolutions. Goals for the day:
-- [x] Animate a line in after effects (mouse movement)
-- [x] work on `AudioEvent` object with correct type and handling logic
-- [x] Have a functional screen on the `Canvas` frontend.
-- [x] Make sure that starting and stopping works.
+```
+  drawline(fromx, fromy, toX, toY) {
+    this.ctx.strokeStyle = "#4abaa3";
+    this.ctx.lineWidth = 3;
+    
+    const sdb =  this.ctx.shadowBlur;
+    const sdc =  this.ctx.shadowColor;
+    const sdx = this.ctx.shadowOffsetX;
+    const sdy = this.ctx.shadowOffsetY;
 
-**Day 5**: 
-Install the controls for the user to interact with the game. Style the frontend, making it polished and professional. Goals for the day:
+    this.ctx.shadowBlur = 8;
+    this.ctx.shadowColor = "blue";
+    this.ctx.shadowOffsetX = 5;
+    this.ctx.shadowOffsetY = 5;
 
-- [x] Create controls for game speed, stop, start, restart.
-- [x] Have a styled `Canvas`, nice looking controls and title
-- [x] Deploy the project on GitHub Pages
+    this.ctx.beginPath();
+    this.ctx.moveTo(fromx, fromy);
+    this.ctx.lineTo(toX, toY);
+    this.ctx.stroke();
+  }
+}
 
-### Bonus features
-- [x] Make it usable by multiple users
-- [x] Adding multiple diffculty levels
+ updatePos() {
+      this.xs = this.xs.map(val => val - 2)
+      this.ys = this.ys.map(val => val + 1.2)
+
+      this.xs.push(this.crl.ball_x)
+      this.ys.push(this.crl.ball_y)
+    
+    
+    if (this.xs.length > 50) {
+      this.xs.shift()
+      this.ys.shift()
+    }
+  }
+```
+
+### Canvas on different screen sizes
+ Canvas will rezies on different users screen sized by giving the canvas a height and width as a portion of user window size
+```
+const canvasEl = document.getElementById("game-canvas");
+  const ctx = canvasEl.getContext("2d");
+  canvasEl.width = window.innerWidth / 1.68;
+  canvasEl.height = window.innerHeight / 1.58;
+```
+### Start, pause, restart!!
+The Game having one event listener for any clicks on any buttons wether was it mutes, pause, or even restart the game with multiple if statements to determine the appropriate action. 
+```
+document.addEventListener('click', function (event) {
+    if (event.target.classList.contains("start")) {}
+    else if (event.target.classList.contains("fa-play") || event.target.id === "pause") {}
+    else if (event.target.classList.contains("fa-volume-mute") || event.target.classList.contains("fa-volume-up") ) {}
+    ..
+```
+
+[Back to Top](#)
