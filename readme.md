@@ -8,7 +8,7 @@
   - [In-Game](#in-game)
   - [Game Over](#game-over)
 - [Feature Highlights](#feature-highlights)
-  - [Handle Enclosures](#handle-enclosures)
+  - [Collision Detection](#collision-detection)
   - [Particles and Notifications](#particles-and-notifications)
   - [Multiplier](#multiplier)
 
