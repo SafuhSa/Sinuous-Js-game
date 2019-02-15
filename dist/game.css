@@ -12,7 +12,7 @@ html, body, div, span, h1, h2, h3, h4, a, ol, ul, li, form, label, article, asid
    /* background-image: url("../imges/space1.jpeg");
   background-repeat: no-repeat; */
 
-  background: url('../imges/dark-sky.jpg') no-repeat center center fixed; 
+  background: url('../images/dark-sky.jpg') no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;

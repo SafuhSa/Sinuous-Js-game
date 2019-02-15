@@ -96,7 +96,7 @@ class Game {
       // this.ctx.fillRect(0, 0, w, h);
       // this.ctx.fillRect(0, 0, this.canvas.width, this.canvas.height);
       let background = new Image()
-      background.src = "./imges/dark-sky.jpg"
+      background.src = "./images/dark-sky.jpg"
 
       
       this.ctx.drawImage(background, 0, 0, this.canvas.width, this.canvas.height);
