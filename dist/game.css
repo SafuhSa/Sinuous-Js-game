@@ -281,11 +281,12 @@ font-size: 280%;
   float: right;
   font-size: 28px;
   font-weight: bold;
+   text-shadow: none;
 }
 
 .close:hover,
 .close:focus {
-  color: black;
+  color: green;
   text-decoration: none;
   cursor: pointer;
 }
