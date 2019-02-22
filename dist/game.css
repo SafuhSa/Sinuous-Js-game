@@ -250,3 +250,9 @@ font-size: 280%;
     text-decoration: none;  
     font-family: fantasy;
 }
+
+.about-button {
+  position: absolute;
+  left: 45%;
+  bottom: 30%;
+}
