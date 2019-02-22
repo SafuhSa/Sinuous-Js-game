@@ -307,11 +307,10 @@ font-size: 280%;
   font-size: 25px;
   text-shadow: 4px 4px 8px limegreen;
 }
-
-/* font-family: fantasy;
-    font-size: xx-large;
-    padding: 8px;
-    text-align: center;
-    height: 60px;
-    color: darkgrey;
-    text-shadow: 4px 4px 8px limegreen; */
+.about-header {
+  margin: auto;
+  font-size: 30px;
+}
+.about-p {
+  margin-top: 10px;
+}
