@@ -194,6 +194,7 @@ body {
     /* display: block;x */
 }
 
+
 .startmute {
   display: flex;
   flex-direction: row;
@@ -274,15 +275,6 @@ font-size: 280%;
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 
-/* Modal Content/Box */
-.modal-content {
-  background-color: #fefefe;
-  margin: 15% auto; /* 15% from the top and centered */
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
-}
-
 /* The Close Button */
 .close {
   color: #aaa;
@@ -297,3 +289,28 @@ font-size: 280%;
   text-decoration: none;
   cursor: pointer;
 }
+
+
+.modal-content {
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 2px solid#333333;
+  border-style: dashed;
+  display: flex;
+  color: darkgrey;
+  flex-direction: column;
+  background-color: rgba(0,0,0,0.7);
+  width: 68%;
+  border-radius: 13px;
+  font-family: fantasy;
+  font-size: 25px;
+  text-shadow: 4px 4px 8px limegreen;
+}
+
+/* font-family: fantasy;
+    font-size: xx-large;
+    padding: 8px;
+    text-align: center;
+    height: 60px;
+    color: darkgrey;
+    text-shadow: 4px 4px 8px limegreen; */
