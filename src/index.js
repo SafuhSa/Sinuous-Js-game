@@ -63,7 +63,6 @@ document.addEventListener("DOMContentLoaded", function() {
                if (sound) audio.play();
                game.start();
              }
-             // audio.stop()
     } else if (event.target.classList.contains("fa-volume-mute") || event.target.classList.contains("fa-volume-up") ) {
              let mute = document.getElementsByClassName("mute")[0];
              let icon = document.createElement("I");
@@ -74,7 +73,6 @@ document.addEventListener("DOMContentLoaded", function() {
                icon.classList.add("fa-volume-mute");
                mute.removeChild(mute.childNodes[0]);
                mute.appendChild(icon);
-               // < i class="fas fa-volume-up" ></i >
              } else {
                sound = true;
                audio.play();
