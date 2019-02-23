@@ -34,6 +34,7 @@ document.addEventListener("DOMContentLoaded", function() {
         updatehtml(doc, pause, game);
         game.start();
         audio.play();
+        audio.loop = true 
         sound = true;
       } else {
         document.location.reload();
@@ -60,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function() {
              } else {
                game.run = "start";
                updatehtml(doc, pause, game);
-               if (sound) audio.play();
+               if (sound) { audio.play(); audio.loop = true }
                game.start();
              }
     } else if (event.target.classList.contains("fa-volume-mute") || event.target.classList.contains("fa-volume-up") ) {
@@ -76,6 +77,7 @@ document.addEventListener("DOMContentLoaded", function() {
              } else {
                sound = true;
                audio.play();
+               audio.loop = true;
 
                icon.classList.add("fa-volume-up");
                mute.removeChild(mute.childNodes[0]);

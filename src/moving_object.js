@@ -62,7 +62,9 @@ class MovingObject {
     if (dis <= both_rds) {
       this.game.life -= 1;
       this.date = Date.now();
+      this.audio.currentTime = 0;
       this.audio.play()
+
       this.drawExplosion(red_bl.ball_x, red_bl.ball_y, 5, "#FFD700");
     }
   }
@@ -93,7 +95,6 @@ class MovingObject {
   update() {
     this.move(this.arr);
     if (!this.demo) {
-      // debugger
       this.crl.draw();
       this.line.draw(this.crl.ball_x, this.crl.ball_y);
     }

@@ -104,17 +104,3 @@ class Game {
     
   }
   module.exports = Game;
-  // }
-  
-  // update() {
-    
-    //   const annimation = () => {
-      //     this.annimate = requestAnimationFrame(annimation);
-      //     this.fillrec();
-      //     this.moving_objs.update()
-      //     if (this.run === 'restart' || this.life < 0) {
-        //       this.run === 'restart'
-        //       // debugger
-        //       cancelAnimationFrame(this.annimate);
-        //     }
-        //   }
