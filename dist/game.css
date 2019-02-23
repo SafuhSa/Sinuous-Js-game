@@ -142,7 +142,7 @@ body {
   color: aliceblue;
 }
 
-.start, .mute, #pause {
+.start, .mute, #pause, .about-button {
   font-family: fantasy;
   background-color: rgba(0,0,0,-0.5);
   color: white;
