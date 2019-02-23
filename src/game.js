@@ -72,8 +72,8 @@ class Game {
 
 
     let lifes = document.getElementsByClassName('lifes')
-      lifes[0].innerHTML = 'lifes: ' + this.life
-      lifes[1].innerHTML = 'lifes: ' + this.life
+    lifes[0].innerHTML = 'Lives: ' + this.life
+    lifes[1].innerHTML = 'Lives: ' + this.life
   }
 
     gameOver() {
