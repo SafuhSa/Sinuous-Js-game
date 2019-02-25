@@ -59,7 +59,7 @@ Upon game death, red dots will explodes flashing, the menu will reappear with yo
 
 The game detects Serpentine and red dots Collied by comparing the distance between the two objects by the sum of their square radius then square rooting the result. If the result is greater than the distance, the method collision(red_ball) would take one live of the user game session and would draw an explosion. Also this.date is update it to give the user a free short time before he collide with another object.
 
-```
+```Javascript
   collision(red_bl) {
     if (Date.now() - this.date <= 700) {
       this.drawExplosion(red_bl.ball_x, red_bl.ball_y, 5, "#FFD700");
@@ -82,7 +82,7 @@ The game detects Serpentine and red dots Collied by comparing the distance betwe
 ```
 ### draw explosion on collisions
  When Serpentine collide with any red dots the game will draw a flashing explosion by adding shadowoffset by x and y of the dot!!
-```
+```Javascript
  drawExplosion(x, y, radius, color) {
     this.ctx.shadowBlur = 8;
     this.ctx.shadowColor = "gold";
@@ -100,7 +100,7 @@ The game detects Serpentine and red dots Collied by comparing the distance betwe
 ### Animate a line in after effects (mouse movement)
 Game will render the players trail as an array of small lines connected together. drawline function will draw each small line then their positions get updated by updatePos function as it map over the array of lines.
 
-```
+```Javascript
   drawline(fromx, fromy, toX, toY) {
     this.ctx.strokeStyle = "#4abaa3";
     this.ctx.lineWidth = 3;
@@ -139,7 +139,7 @@ Game will render the players trail as an array of small lines connected together
 
 ### Canvas on different screen sizes
  Canvas adjust on different users screen size by giving the canvas a height and width as a portion of user window size
-```
+```Javascript
 const canvasEl = document.getElementById("game-canvas");
   const ctx = canvasEl.getContext("2d");
   canvasEl.width = window.innerWidth / 1.68;
@@ -147,7 +147,7 @@ const canvasEl = document.getElementById("game-canvas");
 ```
 ### Start, pause, restart!!
 The Game have one EventListener for any clicks on any buttons wether it was mutes, pause, or even restart the game with multiple if statements to determine the appropriate action. 
-```
+```Javascript
 document.addEventListener('click', function (event) {
     if (event.target.classList.contains("start")) {}
     else if (event.target.classList.contains("fa-play") || event.target.id === "pause") {}
